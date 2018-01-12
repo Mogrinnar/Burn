@@ -78,6 +78,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Casing.cs" />
+    <Compile Include="Assets\CasingGenerator.cs" />
     <Compile Include="Assets\Player\Player.cs" />
     <Compile Include="Assets\PlayerCamera\PlayerCamera.cs" />
     <Compile Include="Assets\Weapon.cs" />

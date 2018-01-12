@@ -18,8 +18,6 @@ public class Player : MonoBehaviour {
     private Vector3 _aimDirection = Vector3.zero;
     private Vector3 _currentWorldPos = Vector3.zero;
 
-    private float _previousAngle = 0.0f;
-
     void Start () {
         _transform = GetComponent<Transform>();
         _transform.position = initialWorldPos;
