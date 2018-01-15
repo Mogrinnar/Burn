@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114595253988275604}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,8 +228,8 @@ MonoBehaviour:
     type: 2}
   casingDirection: {x: -1, y: 1, z: -1}
   ejectStrenght: 10
-  minRandom: -0.3
-  maxRandom: 0.3
+  minRandom: -0.5
+  maxRandom: 0.5
 --- !u!114 &114595253988275604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,7 +265,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1059193811354620}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1

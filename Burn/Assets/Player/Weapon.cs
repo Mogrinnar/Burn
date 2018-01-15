@@ -9,9 +9,10 @@ public class Weapon : MonoBehaviour {
     [Tooltip("Amount of time between shots")]
     public float shootingSpeed = 1.0f;
     private float _shootingDelta = -0.1f;
+    private RaycastHit _hit;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -30,6 +31,16 @@ public class Weapon : MonoBehaviour {
 
             //shoot
             casingGenerator.shootSpentCasing();
+            Debug.DrawLine(transform.position, transform.forward * 1000.0f, Color.red);
+
+            if (Physics.Raycast(transform.position, transform.forward, out _hit, 100))
+            {
+                Enemy enemy = _hit.transform.gameObject.GetComponent<Enemy>();
+                if (enemy != null)
+                {
+                    enemy.Hit();
+                }
+            }
         }
     }
 }

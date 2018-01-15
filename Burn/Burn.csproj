@@ -78,11 +78,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Casing.cs" />
-    <Compile Include="Assets\CasingGenerator.cs" />
+    <Compile Include="Assets\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Enemy\Gib.cs" />
+    <Compile Include="Assets\Player\Casing.cs" />
+    <Compile Include="Assets\Player\CasingGenerator.cs" />
     <Compile Include="Assets\Player\Player.cs" />
+    <Compile Include="Assets\Player\Weapon.cs" />
     <Compile Include="Assets\PlayerCamera\PlayerCamera.cs" />
-    <Compile Include="Assets\Weapon.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

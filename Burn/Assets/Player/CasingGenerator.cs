@@ -29,6 +29,7 @@ public class CasingGenerator : MonoBehaviour {
         Rigidbody casingRigidBody = casing.GetComponent<Rigidbody>();
 
         var currentCasingDirection = new Vector3(casingDirection.x + Random.Range(minRandom, maxRandom), casingDirection.y + Random.Range(minRandom, maxRandom), casingDirection.z + Random.Range(minRandom, maxRandom));
+        currentCasingDirection.Normalize();
         casingRigidBody.AddRelativeForce(casingDirection * (ejectStrenght + (Random.Range(minRandom, maxRandom) * ejectStrenght)), ForceMode.Impulse);
 
         casing.HandleCasingPhysics();

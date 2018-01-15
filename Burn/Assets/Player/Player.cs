@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
 
     public Vector3 initialWorldPos;
     [Range(1.0f, 10.0f)] public float speed = 1.0f;
@@ -18,14 +19,16 @@ public class Player : MonoBehaviour {
     private Vector3 _aimDirection = Vector3.zero;
     private Vector3 _currentWorldPos = Vector3.zero;
 
-    void Start () {
+    void Start()
+    {
         _transform = GetComponent<Transform>();
         _transform.position = initialWorldPos;
         _currentWorldPos = initialWorldPos;
         _weaponTransform = weapon.GetComponent<Transform>();
     }
-	
-	void FixedUpdate () {
+
+    void FixedUpdate()
+    {
         GetAxisInput();
         Move();
         Aim();
@@ -33,7 +36,7 @@ public class Player : MonoBehaviour {
 
     private void Aim()
     {
-        if(_aimDirection.magnitude > 0.7f)
+        if (_aimDirection.magnitude > 0.7f)
             _weaponTransform.LookAt(_aimDirection + _weaponTransform.position);
     }
 
@@ -75,15 +78,4 @@ public class Player : MonoBehaviour {
 
         _moveDirection.Normalize();
     }
-
-    
-
-    /// <summary>
-    /// show the data onGUI
-    /// </summary>
-    /*void OnGUI()
-    {
-        GUI.TextArea(new Rect(400, 200, 250, 50), "Current Axis : " + currentAxis);
-        GUI.TextArea(new Rect(400, 300, 250, 50), "Axis Value : " + axisInput);
-    }*/
 }
