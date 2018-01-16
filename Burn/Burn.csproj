@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Assets\Enemy\Enemy.cs" />
     <Compile Include="Assets\Enemy\Gib.cs" />
+    <Compile Include="Assets\EnemyGenerator.cs" />
     <Compile Include="Assets\Player\Casing.cs" />
     <Compile Include="Assets\Player\CasingGenerator.cs" />
     <Compile Include="Assets\Player\Player.cs" />
